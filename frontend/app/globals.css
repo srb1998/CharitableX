@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-end-rgb: 177, 252, 250; /* teal-200 in RGB */
+  --background-start-rgb: 3, 169, 244; /* teal-500 in RGB */
+}
+
+body {
+  color: rgb(0, 0, 0); /* black */
+  background: linear-gradient(
+      to right, /* changed direction to right */
+      rgb(3, 169, 244), /* teal-500 in RGB */
+      rgb(177, 252, 250) /* teal-200 in RGB */
+  );
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Css */
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animation-delay {
+  animation-delay: 10s;
+}
